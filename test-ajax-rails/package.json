@@ -1,0 +1,25 @@
+{
+  "name": "my-webpack-project",
+  "private": true,
+  "dependencies": {
+    "@rails/actioncable": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "^5.2.1",
+    "turbolinks": "^5.2.0",
+    "webpack": "^5.5.0"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "@webpack-cli/info": "^1.1.0",
+    "@webpack-cli/init": "0.2.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "terser-webpack-plugin": "^5.0.3",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "description": "My webpack project",
+  "scripts": {
+    "build": "webpack"
+  }
+}

@@ -1,0 +1,3262 @@
+Started GET "/events" for 127.0.0.1 at 2020-11-17 13:38:38 +0100
+  
+ActiveRecord::NoDatabaseError (FATAL:  la base de données « JAVAS_development » n'existe pas
+):
+  
+activerecord (6.0.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.4) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (176.7ms)[0m  [1m[35mCREATE DATABASE "JAVAS_development" ENCODING = 'unicode'[0m
+  [1m[35m (111.5ms)[0m  [1m[35mCREATE DATABASE "JAVAS_test" ENCODING = 'unicode'[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(265923881975474520)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20201117123821)
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201117123821"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-17 12:38:59.942028"], ["updated_at", "2020-11-17 12:38:59.942028"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(265923881975474520)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for 127.0.0.1 at 2020-11-17 13:39:12 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1199ms (ActiveRecord: 2.4ms | Allocations: 23708)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:00:23 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 725)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1334ms (ActiveRecord: 0.5ms | Allocations: 5714)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:00:47 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1104ms (ActiveRecord: 1.5ms | Allocations: 10689)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:02:06 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 684)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1353ms (ActiveRecord: 0.3ms | Allocations: 5656)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:02:21 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1193ms (ActiveRecord: 2.9ms | Allocations: 10689)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:11:52 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1230ms (ActiveRecord: 1.9ms | Allocations: 13553)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:14:28 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 684)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1105ms (ActiveRecord: 0.4ms | Allocations: 5670)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:17:47 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 666)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1069ms (ActiveRecord: 0.2ms | Allocations: 5587)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:18:14 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1122ms (ActiveRecord: 2.2ms | Allocations: 10682)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:18:18 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 684)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1103ms (ActiveRecord: 1.5ms | Allocations: 5656)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:21:10 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 666)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1157ms (ActiveRecord: 0.2ms | Allocations: 5588)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:21:25 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1108ms (ActiveRecord: 1.6ms | Allocations: 10681)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:41:52 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1096ms (ActiveRecord: 2.9ms | Allocations: 10681)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:52:46 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1127ms (ActiveRecord: 4.0ms | Allocations: 10685)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:52:49 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 684)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1051ms (ActiveRecord: 0.2ms | Allocations: 5652)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:54:07 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1071ms (ActiveRecord: 1.9ms | Allocations: 10685)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/events" for 127.0.0.1 at 2020-11-17 14:54:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/events"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/events" for 127.0.0.1 at 2020-11-17 14:54:14 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/events"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:54:17 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 684)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 994ms (ActiveRecord: 0.2ms | Allocations: 5654)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:59:18 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1328)
+[Webpacker] Compiling...
+Completed 500 Internal Server Error in 995ms (ActiveRecord: 1.6ms | Allocations: 11319)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sterr' for #<Webpacker::Compiler:0x00005648281c1490>
+Did you mean?  stderr):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 14:59:58 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 684)
+[Webpacker] Compiling...
+Completed 500 Internal Server Error in 1000ms (ActiveRecord: 0.3ms | Allocations: 6303)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `sterr' for #<Webpacker::Compiler:0x00005648281c1490>
+Did you mean?  stderr):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 15:00:23 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1329)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+error Command "webpack" not found.
+
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+Completed 500 Internal Server Error in 995ms (ActiveRecord: 1.7ms | Allocations: 10678)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 15:04:57 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.10
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+Completed 500 Internal Server Error in 1010ms (ActiveRecord: 1.4ms | Allocations: 10681)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/" for 127.0.0.1 at 2020-11-17 16:12:07 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/doury/.rvm/gems/ruby-2.7.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/doury/.rvm/gems/ruby-2.7.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.4ms | Allocations: 295)
+Completed 200 OK in 24ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 1638)
+
+
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:12:16 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1224)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2315ms (ActiveRecord: 2.5ms | Allocations: 10635)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:14:25 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 1537ms (ActiveRecord: 2.8ms | Allocations: 10692)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:17:42 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 1732ms (ActiveRecord: 2.0ms | Allocations: 10692)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:29:47 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2032ms (ActiveRecord: 1.9ms | Allocations: 10693)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:34:44 +0100
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 1619ms (ActiveRecord: 6.2ms | Allocations: 10688)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:38:29 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2157ms (ActiveRecord: 6.7ms | Allocations: 10692)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:44:52 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2065ms (ActiveRecord: 2.5ms | Allocations: 10692)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:51:04 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2013ms (ActiveRecord: 2.3ms | Allocations: 10692)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:56:27 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1328)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2251ms (ActiveRecord: 4.6ms | Allocations: 10692)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:59:48 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 891)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 1820ms (ActiveRecord: 1.0ms | Allocations: 6761)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 16:59:55 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 672)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2009ms (ActiveRecord: 0.3ms | Allocations: 5587)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:03:12 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2051ms (ActiveRecord: 1.6ms | Allocations: 25379)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:04:09 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2006ms (ActiveRecord: 2.3ms | Allocations: 10648)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:09:25 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 740)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2880ms (ActiveRecord: 0.8ms | Allocations: 5640)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:09:41 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 721)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 1984ms (ActiveRecord: 0.8ms | Allocations: 5573)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/user/new" for 127.0.0.1 at 2020-11-17 17:12:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2020-11-17 17:12:20 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 10.5ms | Allocations: 3103)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 3433)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 1963ms (ActiveRecord: 23.3ms | Allocations: 9993)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users/new" for 127.0.0.1 at 2020-11-17 17:15:15 +0100
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 10.6ms | Allocations: 1828)
+  Rendered users/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2279)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2592ms (ActiveRecord: 5.4ms | Allocations: 13307)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users/new" for 127.0.0.1 at 2020-11-17 17:17:51 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 9.3ms | Allocations: 1828)
+  Rendered users/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 2279)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2758ms (ActiveRecord: 3.8ms | Allocations: 13307)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users/new" for 127.0.0.1 at 2020-11-17 17:17:58 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.3ms | Allocations: 413)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 498)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2121ms (ActiveRecord: 0.0ms | Allocations: 5384)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users/new" for 127.0.0.1 at 2020-11-17 17:26:06 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 12.1ms | Allocations: 1828)
+  Rendered users/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 2279)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:10028) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 3010ms (ActiveRecord: 4.4ms | Allocations: 13308)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users/new" for 127.0.0.1 at 2020-11-17 17:26:14 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.4ms | Allocations: 413)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 498)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:10054) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 1976ms (ActiveRecord: 0.0ms | Allocations: 5383)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:34:03 +0100
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:10363) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 3550ms (ActiveRecord: 1.9ms | Allocations: 10653)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:40:41 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:10634) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2134ms (ActiveRecord: 6.5ms | Allocations: 10713)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/assets/config/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:41:03 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 740)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:10663) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2146ms (ActiveRecord: 0.4ms | Allocations: 5703)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/assets/config/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:41:21 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:10734) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2021ms (ActiveRecord: 1.5ms | Allocations: 10713)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/assets/config/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:41:49 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 740)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:10764) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2013ms (ActiveRecord: 0.4ms | Allocations: 5703)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/assets/config/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:42:05 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:10830) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2074ms (ActiveRecord: 2.3ms | Allocations: 10577)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/assets/config/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:43:28 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:10935) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2118ms (ActiveRecord: 5.0ms | Allocations: 10578)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/app/assets/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:45:12 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11035) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2033ms (ActiveRecord: 2.1ms | Allocations: 11340)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/app/assets/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:46:14 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 740)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11074) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] YAMLException: duplicated mapping key at line 7, column 3:
+      public_root_path: assets
+      ^
+    at generateError (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:167:10)
+    at throwError (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:173:9)
+    at storeMappingPair (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:335:7)
+    at readBlockMapping (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1098:9)
+    at composeNode (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readBlockMapping (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1089:11)
+    at composeNode (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readDocument (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1525:3)
+    at loadDocuments (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1588:5)
+    at load (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1614:19) {
+  name: 'YAMLException',
+  reason: 'duplicated mapping key',
+  mark: Mark {
+    name: null,
+    buffer: '# Note: You must restart bin/webpack-dev-server for changes to take effect\n' +
+      '\n' +
+      'default: &default\n' +
+      '  source_path: app/config\n' +
+      '  source_entry_path: config\n' +
+      '  public_root_path: app\n' +
+      '  public_root_path: assets\n' +
+      '  public_output_path: assets\n' +
+      '  cache_path: tmp/cache/webpacker\n' +
+      '  check_yarn_integrity: false\n' +
+      '  webpack_compile_output: true\n' +
+      '\n' +
+      '  # Additional paths webpack should lookup modules\n' +
+      "  # ['app/assets', 'engine/foo/app/assets']\n" +
+      '  resolved_paths: []\n' +
+      '\n' +
+      '  # Reload manifest.json on all requests so we reload latest compiled packs\n' +
+      '  cache_manifest: false\n' +
+      '\n' +
+      '  # Extract and emit a css file\n' +
+      '  extract_css: false\n' +
+      '\n' +
+      '  static_assets_extensions:\n' +
+      '    - .jpg\n' +
+      '    - .jpeg\n' +
+      '    - .png\n' +
+      '    - .gif\n' +
+      '    - .tiff\n' +
+      '    - .ico\n' +
+      '    - .svg\n' +
+      '    - .eot\n' +
+      '    - .otf\n' +
+      '    - .ttf\n' +
+      '    - .woff\n' +
+      '    - .woff2\n' +
+      '\n' +
+      '  extensions:\n' +
+      '    - .mjs\n' +
+      '    - .js\n' +
+      '    - .sass\n' +
+      '    - .scss\n' +
+      '    - .css\n' +
+      '    - .module.sass\n' +
+      '    - .module.scss\n' +
+      '    - .module.css\n' +
+      '    - .png\n' +
+      '    - .svg\n' +
+      '    - .gif\n' +
+      '    - .jpeg\n' +
+      '    - .jpg\n' +
+      '\n' +
+      'development:\n' +
+      '  <<: *default\n' +
+      '  compile: true\n' +
+      '\n' +
+      '  # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules\n' +
+      '  check_yarn_integrity: true\n' +
+      '\n' +
+      '  # Reference: https://webpack.js.org/configuration/dev-server/\n' +
+      '  dev_server:\n' +
+      '    https: false\n' +
+      '    host: localhost\n' +
+      '    port: 3035\n' +
+      '    public: localhost:3035\n' +
+      '    hmr: false\n' +
+      '    # Inline should be set to true if using HMR\n' +
+      '    inline: true\n' +
+      '    overlay: true\n' +
+      '    compress: true\n' +
+      '    disable_host_check: true\n' +
+      '    use_local_ip: false\n' +
+      '    quiet: false\n' +
+      '    pretty: false\n' +
+      '    headers:\n' +
+      "      'Access-Control-Allow-Origin': '*'\n" +
+      '    watch_options:\n' +
+      "      ignored: '**/node_modules/**'\n" +
+      '\n' +
+      '\n' +
+      'test:\n' +
+      '  <<: *default\n' +
+      '  compile: true\n' +
+      '\n' +
+      '  # Compile test packs to a separate directory\n' +
+      '  public_output_path: packs-test\n' +
+      '\n' +
+      'production:\n' +
+      '  <<: *default\n' +
+      '\n' +
+      '  # Production depends on precompilation of packs prior to booting for performance.\n' +
+      '  compile: false\n' +
+      '\n' +
+      '  # Extract and emit a css file\n' +
+      '  extract_css: true\n' +
+      '\n' +
+      '  # Cache manifest.json for performance\n' +
+      '  cache_manifest: true\n' +
+      '\u0000',
+    position: 174,
+    line: 6,
+    column: 2
+  },
+  message: 'duplicated mapping key at line 7, column 3:\n' +
+    '      public_root_path: assets\n' +
+    '      ^'
+}
+
+Completed 500 Internal Server Error in 1692ms (ActiveRecord: 0.3ms | Allocations: 5567)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/app/assets/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:46:29 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11145) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] YAMLException: duplicated mapping key at line 7, column 3:
+      public_root_path: assets
+      ^
+    at generateError (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:167:10)
+    at throwError (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:173:9)
+    at storeMappingPair (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:335:7)
+    at readBlockMapping (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1098:9)
+    at composeNode (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readBlockMapping (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1089:11)
+    at composeNode (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readDocument (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1525:3)
+    at loadDocuments (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1588:5)
+    at load (/home/doury/Bureau/THP/JAVAS/node_modules/js-yaml/lib/js-yaml/loader.js:1614:19) {
+  name: 'YAMLException',
+  reason: 'duplicated mapping key',
+  mark: Mark {
+    name: null,
+    buffer: '# Note: You must restart bin/webpack-dev-server for changes to take effect\n' +
+      '\n' +
+      'default: &default\n' +
+      '  source_path: app/config\n' +
+      '  source_entry_path: config\n' +
+      '  public_root_path: app\n' +
+      '  public_root_path: assets\n' +
+      '  public_output_path: assets\n' +
+      '  cache_path: tmp/cache/webpacker\n' +
+      '  check_yarn_integrity: false\n' +
+      '  webpack_compile_output: true\n' +
+      '\n' +
+      '  # Additional paths webpack should lookup modules\n' +
+      "  # ['app/assets', 'engine/foo/app/assets']\n" +
+      '  resolved_paths: []\n' +
+      '\n' +
+      '  # Reload manifest.json on all requests so we reload latest compiled packs\n' +
+      '  cache_manifest: false\n' +
+      '\n' +
+      '  # Extract and emit a css file\n' +
+      '  extract_css: false\n' +
+      '\n' +
+      '  static_assets_extensions:\n' +
+      '    - .jpg\n' +
+      '    - .jpeg\n' +
+      '    - .png\n' +
+      '    - .gif\n' +
+      '    - .tiff\n' +
+      '    - .ico\n' +
+      '    - .svg\n' +
+      '    - .eot\n' +
+      '    - .otf\n' +
+      '    - .ttf\n' +
+      '    - .woff\n' +
+      '    - .woff2\n' +
+      '\n' +
+      '  extensions:\n' +
+      '    - .mjs\n' +
+      '    - .js\n' +
+      '    - .sass\n' +
+      '    - .scss\n' +
+      '    - .css\n' +
+      '    - .module.sass\n' +
+      '    - .module.scss\n' +
+      '    - .module.css\n' +
+      '    - .png\n' +
+      '    - .svg\n' +
+      '    - .gif\n' +
+      '    - .jpeg\n' +
+      '    - .jpg\n' +
+      '\n' +
+      'development:\n' +
+      '  <<: *default\n' +
+      '  compile: true\n' +
+      '\n' +
+      '  # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules\n' +
+      '  check_yarn_integrity: true\n' +
+      '\n' +
+      '  # Reference: https://webpack.js.org/configuration/dev-server/\n' +
+      '  dev_server:\n' +
+      '    https: false\n' +
+      '    host: localhost\n' +
+      '    port: 3035\n' +
+      '    public: localhost:3035\n' +
+      '    hmr: false\n' +
+      '    # Inline should be set to true if using HMR\n' +
+      '    inline: true\n' +
+      '    overlay: true\n' +
+      '    compress: true\n' +
+      '    disable_host_check: true\n' +
+      '    use_local_ip: false\n' +
+      '    quiet: false\n' +
+      '    pretty: false\n' +
+      '    headers:\n' +
+      "      'Access-Control-Allow-Origin': '*'\n" +
+      '    watch_options:\n' +
+      "      ignored: '**/node_modules/**'\n" +
+      '\n' +
+      '\n' +
+      'test:\n' +
+      '  <<: *default\n' +
+      '  compile: true\n' +
+      '\n' +
+      '  # Compile test packs to a separate directory\n' +
+      '  public_output_path: packs-test\n' +
+      '\n' +
+      'production:\n' +
+      '  <<: *default\n' +
+      '\n' +
+      '  # Production depends on precompilation of packs prior to booting for performance.\n' +
+      '  compile: false\n' +
+      '\n' +
+      '  # Extract and emit a css file\n' +
+      '  extract_css: true\n' +
+      '\n' +
+      '  # Cache manifest.json for performance\n' +
+      '  cache_manifest: true\n' +
+      '\u0000',
+    position: 174,
+    line: 6,
+    column: 2
+  },
+  message: 'duplicated mapping key at line 7, column 3:\n' +
+    '      public_root_path: assets\n' +
+    '      ^'
+}
+
+Completed 500 Internal Server Error in 1665ms (ActiveRecord: 3.3ms | Allocations: 10577)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/assets/assets/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:50:02 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11343) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2550ms (ActiveRecord: 1.7ms | Allocations: 10677)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:51:56 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 24.3ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11441) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2095ms (ActiveRecord: 11.9ms | Allocations: 10673)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:52:01 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 740)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11465) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2133ms (ActiveRecord: 0.2ms | Allocations: 5667)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:52:36 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11538) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2067ms (ActiveRecord: 1.8ms | Allocations: 10713)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/app/assets/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:53:12 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11608) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2119ms (ActiveRecord: 4.5ms | Allocations: 10738)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/app/assets/config/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:55:11 +0100
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11710) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2077ms (ActiveRecord: 3.0ms | Allocations: 10654)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:55:57 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 740)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11751) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2094ms (ActiveRecord: 0.3ms | Allocations: 5641)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 17:59:25 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1408)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.4ms | Allocations: 9465)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+  "menu": {
+    "id": "file",
+    "value": "File",
+    "popup": {
+      "menuitem": [
+        {
+          "value": "New",
+          "onclick": "CreateNewDoc()"
+        },
+        {
+          "value": "Open",
+          "onclick": "OpenDoc()"
+        },
+        {
+          "value": "Close",
+          "onclick": "CloseDoc()"
+        }
+      ]
+    }
+  }
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/users" for 127.0.0.1 at 2020-11-17 18:00:46 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:13
+  Rendered users/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1408)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+(node:11997) ExperimentalWarning: Conditional exports is an experimental feature. This feature could change at any time
+[webpack-cli] Invalid configuration object. Webpack has been initialized using a configuration object that does not match the API schema.
+ - configuration.node should be one of these:
+   false | object { __dirname?, __filename?, global? }
+   -> Include polyfills or mocks for various node stuff.
+   Details:
+    * configuration.node has an unknown property 'dgram'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'fs'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'net'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'tls'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+    * configuration.node has an unknown property 'child_process'. These properties are valid:
+      object { __dirname?, __filename?, global? }
+      -> Options object for node compatibility features.
+
+Completed 500 Internal Server Error in 2034ms (ActiveRecord: 2.9ms | Allocations: 10545)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application in /home/doury/Bureau/THP/JAVAS/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag 'application' %>
+     9:     <%= javascript_pack_tag 'application' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9

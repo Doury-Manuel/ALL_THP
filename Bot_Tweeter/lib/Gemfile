@@ -1,0 +1,5 @@
+gem 'twitter'
+gem 'rubocop'
+gem 'pry'
+gem 'rspec'
+gem 'dotenv'
